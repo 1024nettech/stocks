@@ -73,7 +73,7 @@
   },
   "德国": {
     "point": {
-      "url": "https://d.10jqka.com.cn/v2/realhead/88_GDAXI/last.js"
+      "url": "https://hq.sinajs.cn/list=znb_DAX"
     },
     "val": {
       "code": "GDAXI.GI",
@@ -153,7 +153,7 @@
   },
   "消费龙头": {
     "point": {
-      "url": "https://d.10jqka.com.cn/v2/realhead/120_931068/last.js"
+      "url": "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=CSI931068"
     },
     "val": {
       "code": "931068.CSI",
@@ -273,7 +273,7 @@
   },
   "中证光伏": {
     "point": {
-      "url": "https://d.10jqka.com.cn/v2/realhead/120_931151/last.js"
+      "url": "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=CSI931151"
     },
     "val": {
       "code": "931151.CSI",
