@@ -1,0 +1,384 @@
+{
+  "上证点数": {
+    "point": {
+      "row": 4,
+      "url": "https://d.10jqka.com.cn/v2/realhead/16_1A0001/last.js"
+    },
+    "val": {
+      "row": 3,
+      "code": "881001.WI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证A500": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/16_1B0510/last.js"
+    },
+    "val": {
+      "code": "000510.SH",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "沪深300": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/16_1B0300/last.js"
+    },
+    "val": {
+      "code": "000300.SH",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证500": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/16_1B0905/last.js"
+    },
+    "val": {
+      "code": "000905.SH",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "沪港深500": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_H30455/last.js"
+    },
+    "val": {
+      "code": "H30455.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "标普500": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/88_SPX/last.js"
+    },
+    "val": {
+      "code": "SPX.GI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "印度": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/88_SENSEX/last.js"
+    },
+    "val": {
+      "code": "SENSEX.BO",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "德国": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/88_GDAXI/last.js"
+    },
+    "val": {
+      "code": "GDAXI.GI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "日本": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/88_N225/last.js"
+    },
+    "val": {
+      "code": "N225.GI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证红利": {
+    "point": {
+      "url": "https://qt.gtimg.cn/?q=s_sh000922"
+    },
+    "val": {
+      "code": "000922.CSI",
+      "calc": [0.3, 0.3, 0.4],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "红利质量": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_931468/last.js"
+    },
+    "val": {
+      "code": "931468.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "创业板50": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399673/last.js"
+    },
+    "val": {
+      "code": "399673.SZ",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "创业板指": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399006/last.js"
+    },
+    "val": {
+      "code": "399006.SZ",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证医疗": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399989/last.js"
+    },
+    "val": {
+      "code": "399989.SZ",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "300医药": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/16_1B0913/last.js"
+    },
+    "val": {
+      "code": "000913.SH",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "消费龙头": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_931068/last.js"
+    },
+    "val": {
+      "code": "931068.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "家用电器": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_930697/last.js"
+    },
+    "val": {
+      "code": "930697.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证白酒": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399997/last.js"
+    },
+    "val": {
+      "code": "399997.SZ",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证消费": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/16_1B0932/last.js"
+    },
+    "val": {
+      "code": "000932.SH",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "恒生医药": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/176_HS2077/last.js"
+    },
+    "val": {
+      "code": "HSHCI.HI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中概互联": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_H30533/last.js"
+    },
+    "val": {
+      "code": "H30533.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证中药": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_930641/last.js"
+    },
+    "val": {
+      "code": "930641.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "恒生互联网": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/176_HSIII/last.js"
+    },
+    "val": {
+      "code": "HSIII.HI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "恒生科技": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/176_HS2083/last.js"
+    },
+    "val": {
+      "code": "HSTECH.HI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "全指医药": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/16_1B0991/last.js"
+    },
+    "val": {
+      "code": "000991.SH",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "保险": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399809/last.js"
+    },
+    "val": {
+      "code": "801194.SI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证新能源": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399808/last.js"
+    },
+    "val": {
+      "code": "399808.SZ",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证光伏": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_931151/last.js"
+    },
+    "val": {
+      "code": "931151.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "新能源车": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_930997/last.js"
+    },
+    "val": {
+      "code": "930997.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "CS创新药": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_931152/last.js"
+    },
+    "val": {
+      "code": "931152.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "医疗器械": {
+    "point": {
+      "url": "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=BK0044"
+    },
+    "val": {
+      "code": "h30217.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "半导体": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_H30184/last.js"
+    },
+    "val": {
+      "code": "h30184.CSI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证军工": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399967/last.js"
+    },
+    "val": {
+      "code": "399967.SZ",
+      "calc": [0.3, 0.7, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证畜牧": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_930707/last.js"
+    },
+    "val": {
+      "code": "930707.CSI",
+      "calc": [0.3, 0.7, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "证券行业": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399975/last.js"
+    },
+    "val": {
+      "code": "399975.SZ",
+      "calc": [0.3, 0.7, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "中证有色": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_930708/last.js"
+    },
+    "val": {
+      "code": "930708.CSI",
+      "calc": [0.3, 0.7, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "基建工程": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399995/last.js"
+    },
+    "val": {
+      "code": "399995.SZ",
+      "calc": [0.3, 0.7, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "国证地产": {
+    "point": {
+      "url": "https://d.10jqka.com.cn/v2/realhead/32_399393/last.js"
+    },
+    "val": {
+      "code": "931775.CSI",
+      "calc": [0.3, 0.7, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  }
+}
