@@ -308,7 +308,7 @@
   },
   "医疗器械": {
     "point": {
-      "URL": "https://d.10jqka.com.cn/v2/realhead/120_H30217/last.js"
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_H30217/last.js"
     },
     "val": {
       "code": "h30217.CSI",
