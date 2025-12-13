@@ -73,7 +73,7 @@
   },
   "德国DAX30": {
     "point": {
-      "url": "https://hq.sinajs.cn/list=znb_DAX"
+      "url": "https://d.10jqka.com.cn/v2/realhead/88_GDAXI/last.js"
     },
     "val": {
       "code": "GDAXI.GI",
@@ -93,7 +93,8 @@
   },
   "中证红利": {
     "point": {
-      "url": "https://qt.gtimg.cn/?q=s_sh000922"
+      "url": "https://qt.gtimg.cn/?q=s_sh000922",
+      "tip": "同花顺接口错误, 使用腾讯财经实时行情"
     },
     "val": {
       "code": "000922.CSI",
@@ -153,7 +154,7 @@
   },
   "消费龙头": {
     "point": {
-      "url": "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=CSI931068"
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_931068/last.js"
     },
     "val": {
       "code": "931068.CSI",
@@ -198,7 +199,8 @@
     "val": {
       "code": "HSHCI.HI",
       "calc": [0.5, 0.5, 0],
-      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata",
+      "tip": "估值代码与行情代码非同一主体"
     }
   },
   "中国互联网50": {
@@ -253,7 +255,10 @@
   },
   "保险Ⅱ(申万)": {
     "point": {
-      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+      "code": "801194.SI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata",
+      "tip": "此点数非实时行情, 为昨日收盘价"
     },
     "val": {
       "code": "801194.SI",
@@ -271,9 +276,9 @@
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
-  "中证光伏": {
+  "光伏产业": {
     "point": {
-      "url": "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=CSI931151"
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_931151/last.js"
     },
     "val": {
       "code": "931151.CSI",
@@ -303,7 +308,7 @@
   },
   "医疗器械": {
     "point": {
-      "url": "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=BK0044"
+      "URL": "https://d.10jqka.com.cn/v2/realhead/120_H30217/last.js"
     },
     "val": {
       "code": "h30217.CSI",
@@ -371,9 +376,9 @@
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
-  "国证地产": {
+  "房地产": {
     "point": {
-      "url": "https://d.10jqka.com.cn/v2/realhead/32_399393/last.js"
+      "url": "https://d.10jqka.com.cn/v2/realhead/120_931775/last.js"
     },
     "val": {
       "code": "931775.CSI",
