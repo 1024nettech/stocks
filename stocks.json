@@ -266,12 +266,15 @@
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
-  "CS食品饮": {
+  "食品饮料(申万)": {
     "point": {
-      "url": "https://d.10jqka.com.cn/v2/realhead/120_930653/last.js"
+      "code": "801120.SI",
+      "calc": [0.5, 0.5, 0],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata",
+      "tip": "此点数非实时行情, 为昨日收盘价"
     },
     "val": {
-      "code": "930653.CSI",
+      "code": "801120.SI",
       "calc": [0.5, 0.5, 0],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
