@@ -1,14 +1,11 @@
 import sys
 import json
 import time
-import shutil
 import hashlib
 import requests
 import openpyxl
-import subprocess
 from pathlib import Path
 from datetime import datetime
-from colorama import Fore, Back, Style, init
 
 
 # 获取当前文件所在目录或完整路径, 返回 / 分隔的路径
@@ -25,44 +22,6 @@ def get_path(path_type="file"):
         raise ValueError("path_type 必须是 'file' 或 'directory'")
 
 
-# 添加计划任务, 定期执行
-def add_task_if_needed():
-    task_name = "RunPythonScriptWeekly_GetStocksData"
-    exe_path = get_path("file")
-    try:
-        result = subprocess.run(
-            ["schtasks", "/Query", "/TN", task_name], capture_output=True, text=True
-        )
-        if result.returncode == 0:
-            print(f"计划任务 {task_name} 已存在……")
-        else:
-            print(f"计划任务 {task_name} 不存在, 正在创建……")
-            days_of_week = "MON,THU"
-            # days_of_week = "MON,TUE,WED,THU,FRI,SAT,SUN"  # 每周一到周日执行
-            subprocess.run(
-                [
-                    "schtasks",
-                    "/Create",
-                    "/TN",
-                    task_name,
-                    "/TR",
-                    f'"{exe_path}"',
-                    "/SC",
-                    "WEEKLY",
-                    "/D",
-                    days_of_week,
-                    "/ST",
-                    "11:30",
-                ],
-                check=True,
-            )
-            print(
-                f"计划任务 {task_name} 已成功创建, 并设置为每周 {days_of_week} 上午 11:30 执行……"
-            )
-    except subprocess.CalledProcessError as e:
-        print(f"创建计划任务发生错误: {e}")
-
-
 # 获取时间戳
 def get_timestamp(format_type):
     now = datetime.now()
@@ -74,27 +33,6 @@ def get_timestamp(format_type):
         return now.strftime("%Y%m%d%H%M%S")
     else:
         raise ValueError("Invalid format_type. Use 0 or 1.")
-
-
-# 载入配置文件
-def load_config():
-    config_file_path = Path(get_path("directory")) / "data" / "json" / "data.json"
-    content = config_file_path.read_text(encoding="utf-8")
-    return json.loads(content)
-
-
-# 写入日志记录
-def log(msg):
-    log_file_path = Path(get_path("directory")) / "data" / "detail.txt"
-    log_file_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(log_file_path, "a", encoding="utf-8") as f:
-        f.write(f"{msg}\n")
-
-
-# 输出格式化消息
-def print_format_msg(stock_dict={}):
-    if stock_dict.get("tip"):
-        print(Fore.WHITE + Back.RED + stock_dict["tip"] + Style.RESET_ALL)
 
 
 # 获取股票配置json
@@ -121,10 +59,6 @@ def get_point(url, name_value="", stock_dict={}):
             code_value = data["items"].get("5", None)
             name_value = data["items"].get("name", None)
             point_value = data["items"].get("10", None)
-            # msg = f"\n同花顺代码名称: {code_value}\n同花顺指数名称: {name_value}\n同花顺实时点数: {point_value}"
-            # log(msg)
-            # print(msg)
-            # print_format_msg(stock_dict)
             return [code_value, name_value, point_value]
         else:
             print(f"同花顺请求失败, 状态码: {response.status_code}")
@@ -134,10 +68,6 @@ def get_point(url, name_value="", stock_dict={}):
             code_value = response.text.split("~")[2]
             name_value = response.text.split("~")[1]
             point_value = response.text.split("~")[3]
-            # msg = f"\n腾讯财经代码名称: {code_value}\n腾讯财经指数名称: {name_value}\n腾讯财经实时点数: {point_value}"
-            # log(msg)
-            # print(msg)
-            # print_format_msg(stock_dict)
             return [code_value, name_value, point_value]
         else:
             print(f"腾讯财经请求失败, 状态码: {response.status_code}")
@@ -148,10 +78,6 @@ def get_point(url, name_value="", stock_dict={}):
             code_value = response.text.split("=")[0].replace("var hq_str_", "")
             name_value = response.text.split(",")[0].split('"')[1]
             point_value = response.text.split(",")[1]
-            # msg = f"\n新浪财经代码名称: {code_value}\n新浪财经指数名称: {name_value}\n新浪财经实时点数: {point_value}"
-            # log(msg)
-            # print(msg)
-            # print_format_msg(stock_dict)
             return [code_value, name_value, point_value]
         else:
             print(f"新浪财经请求失败, 状态码: {response.status_code}")
@@ -166,10 +92,6 @@ def get_point(url, name_value="", stock_dict={}):
             if response.status_code == 200:
                 data = response.json()
                 name_value = data["data"]["quote"]["name"]
-            # msg = f"\n雪球代码名称: {code_value}\n雪球指数名称: {name_value}\n雪球实时点数: {point_value}"
-            # log(msg)
-            # print(msg)
-            # print_format_msg(stock_dict)
             return [code_value, name_value, point_value]
         else:
             print(f"雪球请求失败, 状态码: {response.status_code}")
@@ -278,16 +200,8 @@ def get_val(url, timestamp=0, stock_dict={}, type="val"):
                     + xilv * stock_dict["calc"][2]
                 )
                 if type == "point":
-                    # msg = f"\n韭圈儿代码名称: {gu_code}\n韭圈儿指数名称: {gu_name_str}\n韭圈儿实时点数: {point}"
-                    # log(msg)
-                    # print(msg)
-                    # print_format_msg(stock_dict)
                     return [gu_code, gu_name_str, point]
                 elif type == "val":
-                    # msg = f"{gu_name_str} 韭圈儿估值结果: \n\t代码: {gu_code}\n\tpe百分位: {pe} pb百分位: {pb} 息率: {xilv}\n\t权重: {stock_dict["calc"]}\n\t结果: {result}"
-                    # log(msg)
-                    # print(msg)
-                    # print_format_msg(stock_dict)
                     return result
         except Exception as e:
             print(f"估值接口出错: {e}")
@@ -311,15 +225,6 @@ def write_xlsx(results=[], xlsx_path=""):
     xlsx_path = Path(xlsx_path)
     if not xlsx_path.exists():
         raise FileNotFoundError(f"文件 {xlsx_path} 未找到")
-    # timestamp = get_timestamp(2)
-    # new_file_name = f"{xlsx_path.stem}-{timestamp}{xlsx_path.suffix}"
-    # target_dir = Path(get_path("directory")) / "data" / "xlsx"
-    # target_dir.mkdir(parents=True, exist_ok=True)
-    # final_copy_path = target_dir / new_file_name
-    # shutil.copy(xlsx_path, final_copy_path)
-    # msg = f"\n原文件已复制为 {final_copy_path}"
-    # log(msg)
-    # print(msg)
     wb = openpyxl.load_workbook(xlsx_path)
     ws = wb.active
     last_col = detect_last_col1(ws)
@@ -334,9 +239,6 @@ def write_xlsx(results=[], xlsx_path=""):
             ws.cell(row=i, column=new_col, value=str(value))
     set_column_style(ws, new_col)
     wb.save(xlsx_path)
-    # msg = f"数据已成功写入 {xlsx_path}\n——————————————————————————————————————————————————"
-    # log(msg)
-    # print(msg)
 
 
 # 设置Excel最后一列样式
@@ -357,7 +259,6 @@ def set_column_style(ws, col_idx):
 
 
 # ——————————————————————————————————————————————————主体代码开始——————————————————————————————————————————————————
-init()
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0",
 }
@@ -383,4 +284,4 @@ for k, v in stocks.items():
 results[0] = get_timestamp(1)
 results[1] = "上证"
 write_xlsx(results, Path(get_path("directory")) / "stocks_data.xlsx")
-# End-386-2025.12.15.082755
+# End-287-2025.12.15.083732
