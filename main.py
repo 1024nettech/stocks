@@ -121,7 +121,7 @@ def get_point(url, name_value="", stock_dict={}):
             code_value = data["items"].get("5", None)
             name_value = data["items"].get("name", None)
             point_value = data["items"].get("10", None)
-            msg = f"\n同花顺代码名称: {code_value}\n同花顺指数名称: {name_value}\n同花顺实时点数: {point_value}"
+            # msg = f"\n同花顺代码名称: {code_value}\n同花顺指数名称: {name_value}\n同花顺实时点数: {point_value}"
             # log(msg)
             # print(msg)
             # print_format_msg(stock_dict)
@@ -134,7 +134,7 @@ def get_point(url, name_value="", stock_dict={}):
             code_value = response.text.split("~")[2]
             name_value = response.text.split("~")[1]
             point_value = response.text.split("~")[3]
-            msg = f"\n腾讯财经代码名称: {code_value}\n腾讯财经指数名称: {name_value}\n腾讯财经实时点数: {point_value}"
+            # msg = f"\n腾讯财经代码名称: {code_value}\n腾讯财经指数名称: {name_value}\n腾讯财经实时点数: {point_value}"
             # log(msg)
             # print(msg)
             # print_format_msg(stock_dict)
@@ -148,7 +148,7 @@ def get_point(url, name_value="", stock_dict={}):
             code_value = response.text.split("=")[0].replace("var hq_str_", "")
             name_value = response.text.split(",")[0].split('"')[1]
             point_value = response.text.split(",")[1]
-            msg = f"\n新浪财经代码名称: {code_value}\n新浪财经指数名称: {name_value}\n新浪财经实时点数: {point_value}"
+            # msg = f"\n新浪财经代码名称: {code_value}\n新浪财经指数名称: {name_value}\n新浪财经实时点数: {point_value}"
             # log(msg)
             # print(msg)
             # print_format_msg(stock_dict)
@@ -166,7 +166,7 @@ def get_point(url, name_value="", stock_dict={}):
             if response.status_code == 200:
                 data = response.json()
                 name_value = data["data"]["quote"]["name"]
-            msg = f"\n雪球代码名称: {code_value}\n雪球指数名称: {name_value}\n雪球实时点数: {point_value}"
+            # msg = f"\n雪球代码名称: {code_value}\n雪球指数名称: {name_value}\n雪球实时点数: {point_value}"
             # log(msg)
             # print(msg)
             # print_format_msg(stock_dict)
@@ -278,13 +278,13 @@ def get_val(url, timestamp=0, stock_dict={}, type="val"):
                     + xilv * stock_dict["calc"][2]
                 )
                 if type == "point":
-                    msg = f"\n韭圈儿代码名称: {gu_code}\n韭圈儿指数名称: {gu_name_str}\n韭圈儿实时点数: {point}"
+                    # msg = f"\n韭圈儿代码名称: {gu_code}\n韭圈儿指数名称: {gu_name_str}\n韭圈儿实时点数: {point}"
                     # log(msg)
                     # print(msg)
                     # print_format_msg(stock_dict)
                     return [gu_code, gu_name_str, point]
                 elif type == "val":
-                    msg = f"{gu_name_str} 韭圈儿估值结果: \n\t代码: {gu_code}\n\tpe百分位: {pe} pb百分位: {pb} 息率: {xilv}\n\t权重: {stock_dict["calc"]}\n\t结果: {result}"
+                    # msg = f"{gu_name_str} 韭圈儿估值结果: \n\t代码: {gu_code}\n\tpe百分位: {pe} pb百分位: {pb} 息率: {xilv}\n\t权重: {stock_dict["calc"]}\n\t结果: {result}"
                     # log(msg)
                     # print(msg)
                     # print_format_msg(stock_dict)
@@ -383,4 +383,4 @@ for k, v in stocks.items():
 results[0] = get_timestamp(1)
 results[1] = "上证"
 write_xlsx(results, Path(get_path("directory")) / "stocks_data.xlsx")
-# End-386-2025.12.15.081755
+# End-386-2025.12.15.082755
