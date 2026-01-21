@@ -263,7 +263,7 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0",
 }
 stocks = get_stocks_json()
-row = 7
+row = 8
 for k, v in stocks.items():
     if not v["point"].get("row"):
         v["point"]["row"] = row
@@ -285,3 +285,4 @@ results[0] = get_timestamp(1)
 results[1] = "上证"
 write_xlsx(results, Path(get_path("directory")) / "stocks_data.xlsx")
 # End-287-2025.12.15.094645
+
