@@ -7,7 +7,11 @@
     "val": {
       "row": 3,
       "code": "881001.WI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -17,7 +21,11 @@
     },
     "val": {
       "code": "000510.SH",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -27,7 +35,11 @@
     },
     "val": {
       "code": "000300.SH",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -37,7 +49,11 @@
     },
     "val": {
       "code": "000905.SH",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -47,7 +63,11 @@
     },
     "val": {
       "code": "H30455.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -57,7 +77,11 @@
     },
     "val": {
       "code": "SPX.GI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -67,7 +91,11 @@
     },
     "val": {
       "code": "SENSEX.BO",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -77,7 +105,11 @@
     },
     "val": {
       "code": "GDAXI.GI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -87,7 +119,11 @@
     },
     "val": {
       "code": "N225.GI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -98,7 +134,71 @@
     },
     "val": {
       "code": "000922.CSI",
-      "calc": [0.3, 0.3, 0.4],
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "博时中证红利低波100ETF": {
+    "point": {
+      "url": "https://qt.gtimg.cn/?q=s_sz159307",
+      "tip": "来源: 腾讯财经实时行情"
+    },
+    "val": {
+      "code": "930955.CSI",
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "易方达中证红利低波动ETF": {
+    "point": {
+      "url": "https://qt.gtimg.cn/?q=s_sh563020",
+      "tip": "来源: 腾讯财经实时行情"
+    },
+    "val": {
+      "code": "h30269.CSI",
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "华泰柏瑞上证红利ETF": {
+    "point": {
+      "url": "https://qt.gtimg.cn/?q=s_sh510880",
+      "tip": "来源: 腾讯财经实时行情"
+    },
+    "val": {
+      "code": "000015.SH",
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "嘉实沪深300红利低波动ETF": {
+    "point": {
+      "url": "https://qt.gtimg.cn/?q=s_sh515300",
+      "tip": "来源: 腾讯财经实时行情"
+    },
+    "val": {
+      "code": "930740.CSI",
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -108,7 +208,11 @@
     },
     "val": {
       "code": "931468.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -118,7 +222,11 @@
     },
     "val": {
       "code": "399673.SZ",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -128,7 +236,11 @@
     },
     "val": {
       "code": "399006.SZ",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -138,7 +250,11 @@
     },
     "val": {
       "code": "399989.SZ",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -148,7 +264,11 @@
     },
     "val": {
       "code": "000913.SH",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -158,7 +278,11 @@
     },
     "val": {
       "code": "931068.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -168,7 +292,11 @@
     },
     "val": {
       "code": "930697.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -178,7 +306,11 @@
     },
     "val": {
       "code": "399997.SZ",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -188,7 +320,11 @@
     },
     "val": {
       "code": "000932.SH",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -198,7 +334,11 @@
     },
     "val": {
       "code": "HSHCI.HI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata",
       "tip": "估值代码与行情代码非同一主体"
     }
@@ -209,7 +349,11 @@
     },
     "val": {
       "code": "H30533.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -219,7 +363,11 @@
     },
     "val": {
       "code": "930641.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -229,7 +377,11 @@
     },
     "val": {
       "code": "HSIII.HI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -239,7 +391,11 @@
     },
     "val": {
       "code": "HSTECH.HI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -249,33 +405,53 @@
     },
     "val": {
       "code": "000991.SH",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
   "保险Ⅱ(申万)": {
     "point": {
       "code": "801194.SI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata",
       "tip": "此点数非实时行情, 为昨日收盘价"
     },
     "val": {
       "code": "801194.SI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
   "食品饮料(申万)": {
     "point": {
       "code": "801120.SI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata",
       "tip": "此点数非实时行情, 为昨日收盘价"
     },
     "val": {
       "code": "801120.SI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -285,7 +461,11 @@
     },
     "val": {
       "code": "399808.SZ",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -295,7 +475,11 @@
     },
     "val": {
       "code": "931151.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -305,7 +489,11 @@
     },
     "val": {
       "code": "930997.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -315,7 +503,11 @@
     },
     "val": {
       "code": "931152.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -325,7 +517,11 @@
     },
     "val": {
       "code": "h30217.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -335,7 +531,11 @@
     },
     "val": {
       "code": "h30184.CSI",
-      "calc": [0.5, 0.5, 0],
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -345,7 +545,11 @@
     },
     "val": {
       "code": "399967.SZ",
-      "calc": [0.3, 0.7, 0],
+      "calc": [
+        0.3,
+        0.7,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -355,7 +559,11 @@
     },
     "val": {
       "code": "930707.CSI",
-      "calc": [0.3, 0.7, 0],
+      "calc": [
+        0.3,
+        0.7,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -365,7 +573,11 @@
     },
     "val": {
       "code": "399975.SZ",
-      "calc": [0.3, 0.7, 0],
+      "calc": [
+        0.3,
+        0.7,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -375,7 +587,11 @@
     },
     "val": {
       "code": "930708.CSI",
-      "calc": [0.3, 0.7, 0],
+      "calc": [
+        0.3,
+        0.7,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -385,7 +601,11 @@
     },
     "val": {
       "code": "399995.SZ",
-      "calc": [0.3, 0.7, 0],
+      "calc": [
+        0.3,
+        0.7,
+        0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   },
@@ -395,7 +615,26 @@
     },
     "val": {
       "code": "931775.CSI",
-      "calc": [0.3, 0.7, 0],
+      "calc": [
+        0.3,
+        0.7,
+        0
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+    }
+  },
+  "航空航天": {
+    "point": {
+      "url": "https://qt.gtimg.cn/?q=s_sz159241",
+      "tip": "来源: 腾讯财经实时行情"
+    },
+    "val": {
+      "code": "CN5082.CNI",
+      "calc": [
+        0.3,
+        0.7,
+        0.0
+      ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
   }
