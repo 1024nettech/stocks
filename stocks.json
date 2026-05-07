@@ -633,7 +633,7 @@
       "calc": [
         0.3,
         0.7,
-        0.0
+        0
       ],
       "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     }
