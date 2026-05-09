@@ -95,6 +95,20 @@ def get_point(url, name_value="", stock_dict={}):
             return [code_value, name_value, point_value]
         else:
             print(f"雪球请求失败, 状态码: {response.status_code}")
+    elif "hq.cnindex.com.cn" in url:  # 国证指数
+        response = requests.get(url, headers=headers)
+        if response.status_code == 200:
+            data = response.json()
+            if data.get("code") == 200:
+                inner_data = data.get("data", {})
+                code_value = inner_data.get("indexCode")
+                name_value = inner_data.get("indexName")
+                # 提取 data 数组中第一项的第 2 个值 (index 1 为 current 点数)
+                point_list = inner_data.get("data", [])
+                point_value = point_list[0][1] if point_list else None
+                return [code_value, name_value, point_value]
+            else:
+                print(f"国证请求失败, 状态码: {response.status_code}")
 
 
 # 韭圈儿解析加密字段
@@ -284,5 +298,4 @@ for k, v in stocks.items():
 results[0] = get_timestamp(1)
 results[1] = "上证"
 write_xlsx(results, Path(get_path("directory")) / "stocks_data.xlsx")
-# End-287-2025.12.15.094645
-
+# End-301-2026.05.09.173330
