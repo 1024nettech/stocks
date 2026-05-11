@@ -156,8 +156,17 @@
     }
   },
   "红利低波": {
-    "point": {
+    "point0": {
       "url": "https://stock.xueqiu.com/v5/stock/quote.json?symbol=CSIH30269&extend=detail"
+    },
+    "point": {
+      "code": "h30269.CSI",
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     },
     "val": {
       "code": "h30269.CSI",
@@ -170,8 +179,17 @@
     }
   },
   "红利指数": {
-    "point": {
+    "point0": {
       "url": "https://stock.xueqiu.com/v5/stock/quote.json?symbol=SH000015&extend=detail"
+    },
+    "point": {
+      "code": "000015.SH",
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     },
     "val": {
       "code": "000015.SH",
@@ -184,8 +202,17 @@
     }
   },
   "300红利低波": {
-    "point": {
+    "point0": {
       "url": "https://stock.xueqiu.com/v5/stock/quote.json?symbol=CSI930740&extend=detail"
+    },
+    "point": {
+      "code": "930740.CSI",
+      "calc": [
+        0.3,
+        0.3,
+        0.4
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     },
     "val": {
       "code": "930740.CSI",
@@ -451,7 +478,7 @@
     }
   },
   "生物科技": {
-    "point": {
+    "point0": {
       "code": "801120.SI",
       "calc": [
         0.5,
@@ -459,6 +486,15 @@
         0
       ],
       "url": "https://stock.xueqiu.com/v5/stock/quote.json?symbol=CSI930743&extend=detail"
+    },
+    "point": {
+      "code": "930743.CSI",
+      "calc": [
+        0.5,
+        0.5,
+        0
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     },
     "val": {
       "code": "930743.CSI",
@@ -639,8 +675,17 @@
     }
   },
   "航空航天": {
-    "point": {
+    "point0": {
       "url": "https://hq.cnindex.com.cn/market/market/getIndexLatestRealTimeData?indexCode=CN5082"
+    },
+    "point": {
+      "code": "CN5082.CNI",
+      "calc": [
+        0.3,
+        0.7,
+        0
+      ],
+      "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
     },
     "val": {
       "code": "CN5082.CNI",
