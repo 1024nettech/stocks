@@ -55,6 +55,8 @@ def get_point(url, name_value="", stock_dict={}):
             start_index = response_text.find("{")
             end_index = response_text.rfind("}") + 1
             json_str = response_text[start_index:end_index]
+            print("当前请求地址：", url)
+            print("接口原始返回文本：", repr(json_str))
             data = json.loads(json_str)
             code_value = data["items"].get("5", None)
             name_value = data["items"].get("name", None)
@@ -291,6 +293,10 @@ for k, v in stocks.items():
         point = get_val(v["point"]["url"], get_timestamp(0), v["point"], type="point")
     else:
         point = get_point(v["point"]["url"], k, v["point"])
+        if point is None:
+            print(f"{k} 行情获取失败，跳过")
+            continue
+
     results[v["point"]["row"] - 1] = point[2]
     val = get_val(v["val"]["url"], get_timestamp(0), v["val"])
     results[v["val"]["row"] - 1] = val
@@ -298,4 +304,4 @@ for k, v in stocks.items():
 results[0] = get_timestamp(1)
 results[1] = "上证"
 write_xlsx(results, Path(get_path("directory")) / "stocks_data.xlsx")
-# End-301-2026.05.09.173330
+# End-307-2026.07.13.143212
