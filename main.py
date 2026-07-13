@@ -48,7 +48,115 @@ def get_stocks_json():
 
 
 # 获取股票实时点数
-def get_point(url, name_value="", stock_dict={}):
+# 修复默认可变参数陷阱：不要直接写 stock_dict={}
+def get_point(url, name_value="", stock_dict=None):
+    if stock_dict is None:
+        stock_dict = {}
+
+    max_retry = 100  # 最大重试次数
+    retry_count = 0
+
+    while retry_count < max_retry:
+        # 随机取 3~5 之间整数秒
+        rand_sec = random.randint(3, 5)
+        print(f"第{retry_count+1}次请求，即将休眠 {rand_sec} 秒")
+        time.sleep(rand_sec)
+        print("休眠结束，开始请求接口")
+
+        try:
+            if "d.10jqka.com.cn" in url:  # 同花顺
+                response = requests.get(url, headers=headers, timeout=10)
+                if response.status_code == 200:
+                    response_text = response.text.strip()
+                    start_index = response_text.find("{")
+                    end_index = response_text.rfind("}") + 1
+                    json_str = response_text[start_index:end_index]
+                    print("当前请求地址：", url)
+                    print("接口原始返回文本：", repr(json_str))
+                    data = json.loads(json_str)
+                    items = data["items"]
+                    code_value = items.get("5", None)
+                    name_value = items.get("name", None)
+                    point_value = items.get("10", None)
+                    return [code_value, name_value, point_value]
+                else:
+                    print(f"同花顺请求失败, 状态码: {response.status_code}")
+
+            elif "qt.gtimg.cn" in url:  # 腾讯财经
+                response = requests.get(url, headers=headers, timeout=10)
+                if response.status_code == 200:
+                    text = response.text
+                    code_value = text.split("~")[2]
+                    name_value = text.split("~")[1]
+                    point_value = text.split("~")[3]
+                    return [code_value, name_value, point_value]
+                else:
+                    print(f"腾讯财经请求失败, 状态码: {response.status_code}")
+
+            elif "hq.sinajs.cn" in url:  # 新浪财经
+                headers["Referer"] = "https://finance.sina.com.cn/"
+                response = requests.get(url, headers=headers, timeout=10)
+                if response.status_code == 200:
+                    text = response.text
+                    code_value = text.split("=")[0].replace("var hq_str_", "")
+                    name_value = text.split(",")[0].split('"')[1]
+                    point_value = text.split(",")[1]
+                    return [code_value, name_value, point_value]
+                else:
+                    print(f"新浪财经请求失败, 状态码: {response.status_code}")
+
+            elif "stock.xueqiu.com" in url:  # 雪球
+                response = requests.get(url, headers=headers, timeout=10)
+                if response.status_code == 200:
+                    data = response.json()
+                    code_value = data["data"][0]["symbol"]
+                    point_value = data["data"][0]["current"]
+                    url2 = url.replace("realtime/quotec", "quote")
+                    response2 = requests.get(url2, headers=headers, timeout=10)
+                    if response2.status_code == 200:
+                        data2 = response2.json()
+                        name_value = data2["data"]["quote"]["name"]
+                    return [code_value, name_value, point_value]
+                else:
+                    print(f"雪球请求失败, 状态码: {response.status_code}")
+
+            elif "hq.cnindex.com.cn" in url:  # 国证指数
+                response = requests.get(url, headers=headers, timeout=10)
+                if response.status_code == 200:
+                    data = response.json()
+                    if data.get("code") == 200:
+                        inner_data = data.get("data", {})
+                        code_value = inner_data.get("indexCode")
+                        name_value = inner_data.get("indexName")
+                        point_list = inner_data.get("data", [])
+                        point_value = point_list[0][1] if point_list else None
+                        return [code_value, name_value, point_value]
+                    else:
+                        print(f"国证返回code非200")
+                else:
+                    print(f"国证请求失败, 状态码: {response.status_code}")
+
+            # 走到这里说明本次请求没成功解析，进入重试
+            retry_count += 1
+            print(f"解析无有效数据，准备重试，已重试次数：{retry_count}")
+
+        except (json.JSONDecodeError, IndexError, KeyError, TypeError) as parse_err:
+            # JSON解析失败、数组下标越界、字典key不存在等解析类异常，触发重试
+            print(f"解析数据出错：{type(parse_err).__name__} - {str(parse_err)}")
+            retry_count += 1
+            print(f"解析异常，即将重试，已重试次数：{retry_count}/{max_retry}")
+        except requests.exceptions.RequestException as req_err:
+            # 网络超时、连接失败等网络异常也一并重试
+            print(f"网络请求异常：{str(req_err)}")
+            retry_count += 1
+            print(f"网络异常，即将重试，已重试次数：{retry_count}/{max_retry}")
+
+    # 超过最大重试次数
+    print(f"已达到最大重试次数 {max_retry}，放弃请求")
+    return None
+
+
+def get_point0(url, name_value="", stock_dict={}):
     # 随机取 3~5 之间整数秒
     rand_sec = random.randint(3, 5)
     print(f"即将休眠 {rand_sec} 秒")
@@ -62,7 +170,6 @@ def get_point(url, name_value="", stock_dict={}):
             start_index = response_text.find("{")
             end_index = response_text.rfind("}") + 1
             json_str = response_text[start_index:end_index]
-            # json_str = response_text.split("last(")[1].split(")")[0]
             print("当前请求地址：", url)
             print("接口原始返回文本：", repr(json_str))
             data = json.loads(json_str)
@@ -312,4 +419,4 @@ for k, v in stocks.items():
 results[0] = get_timestamp(1)
 results[1] = "上证"
 write_xlsx(results, Path(get_path("directory")) / "stocks_data.xlsx")
-# End-315-2026.07.13.151407
+# End-422-2026.07.13.152723
