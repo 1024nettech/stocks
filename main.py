@@ -1,6 +1,7 @@
 import sys
 import json
 import time
+import random
 import hashlib
 import requests
 import openpyxl
@@ -48,6 +49,12 @@ def get_stocks_json():
 
 # 获取股票实时点数
 def get_point(url, name_value="", stock_dict={}):
+    # 随机取 3~5 之间整数秒
+    rand_sec = random.randint(3, 5)
+    print(f"即将休眠 {rand_sec} 秒")
+    time.sleep(rand_sec)
+    print("休眠结束")
+
     if "d.10jqka.com.cn" in url:  # 同花顺
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
@@ -305,4 +312,4 @@ for k, v in stocks.items():
 results[0] = get_timestamp(1)
 results[1] = "上证"
 write_xlsx(results, Path(get_path("directory")) / "stocks_data.xlsx")
-# End-308-2026.07.13.145828
+# End-315-2026.07.13.151407
