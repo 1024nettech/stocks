@@ -55,7 +55,7 @@ def get_point(url, name_value="", stock_dict={}):
             start_index = response_text.find("{")
             end_index = response_text.rfind("}") + 1
             json_str = response_text[start_index:end_index]
-            json_str = response_text.split("last(")[1].split(")")[0]
+            # json_str = response_text.split("last(")[1].split(")")[0]
             print("当前请求地址：", url)
             print("接口原始返回文本：", repr(json_str))
             data = json.loads(json_str)
