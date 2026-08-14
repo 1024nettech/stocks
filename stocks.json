@@ -99,6 +99,17 @@
             "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
         }
     },
+    "韩国综合指数": {
+        "cat": "全球市场主要宽基",
+        "point": {
+            "url": "https://d.10jqka.com.cn/v2/realhead/88_KS11/last.js"
+        },
+        "val": {
+            "code": "KS11.GI",
+            "calc": [0.5, 0.5, 0],
+            "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
+        }
+    },
     "中证红利": {
         "cat": "红利指数",
         "point": {
