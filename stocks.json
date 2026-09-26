@@ -399,7 +399,7 @@
         },
         "val": {
             "code": "399808.SZ",
-            "calc": [0.5, 0.5, 0],
+            "calc": [0.3, 0.7, 0],
             "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
         }
     },
@@ -410,7 +410,7 @@
         },
         "val": {
             "code": "931151.CSI",
-            "calc": [0.5, 0.5, 0],
+            "calc": [0.3, 0.7, 0],
             "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
         }
     },
@@ -421,7 +421,7 @@
         },
         "val": {
             "code": "930997.CSI",
-            "calc": [0.5, 0.5, 0],
+            "calc": [0.3, 0.7, 0],
             "url": "https://api.jiucaishuo.com/v2/guzhi/newtubiaodata"
         }
     },
